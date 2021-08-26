@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+    font-size: 80px;
+    color: rgba(223, 21, 115, 0.979);
+    padding-top: 20px;
+  }
+  body{
+    background-image:url("https://i.pinimg.com/originals/55/70/ef/5570ef614b8c3c4baea08bfe7b1d49ec.png");
+    background-position:center center;
+    background-size:cover;
+    position:relative;
+    font-family:sans-serif;
+    background-repeat:no-repeat;
+    height: 850px;
+    }
