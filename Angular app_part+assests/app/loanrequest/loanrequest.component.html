@@ -1,0 +1,62 @@
+<header>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <body id="myPage">
+  <div class="w3-top">
+  <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a class="w3-bar-item w3-button w3-coral"><i class="fa fa-home w3-margin-right"></i>AlphaBank</a>
+  <a routerLink="/loanrequest" class="w3-bar-item w3-button w3-hide-small w3-hover-white">ApplyLoan</a>
+  
+  <a routerLink="/home" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">Logout</a>
+  
+    
+  </div>
+  </div>
+
+
+<body>
+<div class="container">
+    <div class="main"> 
+      
+          <form #form="ngForm">
+            <div class="form-group">
+              <label for="customerid">Enter Customer Id :</label><br>
+              <input type="text" [(ngModel)]="loan.customerid"  placeholder="Customer ID" name="customerid"  class="form-control" >
+            </div>
+              <div class="form-group">
+                <label for="phoneno">Enter Phone Number :</label><br>
+                <input type="text" [(ngModel)]="loan.phoneno" placeholder="phoneno" name="phoneno"  class="form-control" >
+              </div>
+    
+            <div class="form-group">
+              <label for="amount">Enter Loan Amount :</label><br>
+              <input type="number" [(ngModel)]="loan.amount" placeholder="amount in rupees" name="amount"  class="form-control" >
+            </div>
+            <div class="form-group">
+              <label for="time period">Enter Repayment Period :</label><br>
+              <input type="number" [(ngModel)]="loan.time" placeholder="No of years" name="time period" class="form-control" >
+            </div>
+            <div class="form-group">
+              <label for="account">Select Rate of Interest(%) : </label><br>
+              <div><select type="select" [(ngModel)]="loan.interest" name="accounttype" class="form-control">
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-success" (click)="Loan()">Submit Loan Request</button>
+            </div>
+          </form>
+    </div>
+   </div>
+</body>

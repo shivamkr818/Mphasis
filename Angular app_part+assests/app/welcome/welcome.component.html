@@ -1,0 +1,105 @@
+<header>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <body id="myPage">
+<div class="w3-top">
+<div class="w3-bar w3-theme-d2 w3-left-align">
+<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+<a routerLink="/welcome/:userID" class="w3-bar-item w3-button w3-coral"><i class="fa fa-home w3-margin-right"></i>AlphaBank</a>
+<a routerLink="/loanrequest" class="w3-bar-item w3-button w3-hide-small w3-hover-white">ApplyLoan</a>
+
+<a routerLink="/home" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">Logout({{customer.name}})</a>
+
+  
+</div>
+</div>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <body>
+ 
+  <br>
+  <br>
+  <br>
+<h1><b>WELCOME {{customer.name}} </b></h1>
+<h3>Thankyou for choosing MphasisBank</h3>
+<h1>Available Balance =    {{balance.balance1}}     <button class="btn" (click)="getbalance()">click here to see available balance</button>
+</h1>
+<h2 class="text">You Can Deposite and Withdraw Money to your account here</h2><br>
+    <div class="container2">
+    <div class="column">
+        <h2 class="text-center"> <b>Deposit</b></h2>
+    
+        <form #form="ngForm">
+          
+          <div class="form-group">
+            <label for="type of employee">Select Type Of User : </label>
+            <div><select name="Usertype" class="form-control">
+                <option value="Manager">savings</option>
+                <option value="Employee">current</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name">Enter Amount to Deposit</label>
+            <input [(ngModel)]="depositbalance" placeholder="0" name="name" class="form-control" id="name">
+          </div>
+         
+          <div>
+            <button class="btn btn-success" (click)="deposit()">Deposit</button>
+          </div>
+          
+        
+        </form>
+  </div>
+</div>
+  <div class="container1">
+      <div class="column1" id="section1">
+    
+        <h2 class="text-center"><b> Withdraw</b></h2>
+    
+        <form #form="ngForm">
+          
+          <div class="form-group">
+            <label for="type of employee">Select Type Of User : </label>
+            <div><select name="Usertype" class="form-control">
+                <option value="Manager">savings</option>
+                <option value="Employee">current</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name">Enter Amount to withdraw</label>
+            <input  [(ngModel)]="withdrawbalance" placeholder="0" name="name" class="form-control" id="name" >
+           
+          </div>
+         
+          <div>
+            <button class="btn btn-success" type="submit" (click)="withdraw()">withdraw</button>
+          </div>
+         </form>
+        </div>
+        </div>
+ </body>
+ 
+ 
+
+      
+ 
+        
+    
+     
+

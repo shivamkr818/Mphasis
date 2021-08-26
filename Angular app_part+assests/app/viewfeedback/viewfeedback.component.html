@@ -1,0 +1,81 @@
+
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <body id="myPage">
+<div class="w3-top">
+<div class="w3-bar w3-theme-d2 w3-left-align">
+<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+<a class="w3-bar-item w3-button w3-coral"><i class="fa fa-home w3-margin-right"></i>AlphaBank</a>
+
+<a routerLink="/viewfeedback" class="w3-bar-item w3-button w3-hide-small w3-hover-white">ViewFeedback</a>
+
+
+
+
+<a routerLink="/home" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">Logout</a>
+  
+</div>
+</div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <body>
+<br>
+<br>
+
+      
+
+
+      <div class="container">
+          
+        <h1><b>Feedback Details</b></h1>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <br>
+          <table class="table  table-hover table-light">
+            <thead>
+              <tr>
+                  <th>Customer ID</th>
+                  <th>Name</th>
+                  <th>PhoneNo</th>
+                  <th>Email</th>
+                  <th>Message</th>
+                  
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr *ngFor="let s of feedbacks">
+                  <td>{{s.usersid}}</td>
+                  <td>{{s.name}}</td>
+  
+                  <td>{{s.phone}}</td>
+                  <td>{{s.email}}</td>
+                  <td>{{s.message}}</td>       
+                  
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+
+      <br>
+      <br>
+
+
+      
+
+      
+      
+
+      

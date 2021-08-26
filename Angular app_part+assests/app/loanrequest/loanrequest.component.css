@@ -1,0 +1,133 @@
+body{
+    scroll-behavior: smooth;
+
+    background-image:url(/assets/85.jpeg);
+    background-position:center center;
+    background-size:cover;
+    position:relative;
+    font-family:sans-serif;
+    background-repeat:no-repeat;
+    height: 100vh;
+    }
+    h1,h3,h2{
+        text-align: center;
+    }
+    h1.align{
+        text-align: left;
+    }
+    table {
+        border-collapse: separate;
+        border-spacing: 100px 55px;
+      }
+.btn{
+
+ 
+    border-radius: 30px;
+    font-size: 16px;
+    font-family: 'robotolight';
+    color: #fff;
+    padding: 12px 15px 10px 20px;
+    background: #080808;
+}
+.column {
+    float: left;
+    width: 300px;
+    padding-left: 400px;
+    margin-bottom: 16px;
+    padding: 0px 8px 10px 20px;
+    column-gap: 100px;
+  }
+  .column1 {
+    float: right;
+    width: 300px;
+    padding-left: 400px;
+    margin-bottom: 16px;
+    padding: 0px 8px 10px 20px;
+    column-gap: 100px;
+  }
+  .container1{
+    padding-right: 250px;
+    width: 320px;
+    float:right;
+    padding: 10px 10px 10px;
+    background-color: antiquewhite;
+    border: 5px solid rgb(8, 8, 8);
+    box-shadow: 0 0 10px;
+    border-radius: 2px;
+    position:center;
+    font-size: 13px;
+    
+  }
+  .container2{
+    padding-left: 250px;
+    width: 320px;
+    float:left;
+    padding: 10px 10px 10px;
+    background-color: antiquewhite;
+    border: 5px solid rgb(8, 8, 8);
+    box-shadow: 0 0 10px;
+    border-radius: 2px;
+    position:center;
+    font-size: 13px;
+  }
+  input[type=text],[type=password],[type=select],[type=number]{
+    width: 300px;
+    height: 25px;
+    padding-left: 3px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    box-shadow: 0 0 5px rgb(20, 20, 20);
+    border: 2px solid rgb(8, 7, 8);
+    color: black;
+    font-size: 16px;
+    }
+  .section1{
+      height: 100vh;
+  }
+  .section2{
+      height: 150vh;
+      padding: auto;
+      background:linear-gradient(to left ,rgb(240, 188, 93),rgba(7, 6, 4, 0.822));  }
+  
+  div.container{
+    
+    
+
+
+}
+.alignment{
+    padding-top: 1%;
+}
+div.main{
+    margin:200px 10px 50px; 
+width: 400px;
+height: 480px;
+float:right;
+padding: 20px 30px 20px 50px;
+    background-color: rgba(39, 27, 2, 0.459);
+    border: 5px solid rgb(8, 8, 8);
+    
+
+box-shadow: 0 0 10px;
+border-radius: 2px;
+position:center;
+font-size: 13px;
+}
+input[type=text],[type=number],[type=select]{
+width: 250px;
+height: 25px;
+padding-left: 3px;
+margin-bottom: 20px;
+margin-top: 8px;
+box-shadow: 0 0 5px rgb(20, 20, 20);
+border: 2px solid rgb(8, 7, 8);
+color: black;
+font-size: 16px;
+}
+label{
+color: white;
+text-shadow: 0 1px 0 rgb(20, 20, 20);
+font-size: 15px;
+font-weight: bold;
+
+}

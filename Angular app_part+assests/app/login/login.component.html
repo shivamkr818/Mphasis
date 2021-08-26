@@ -1,0 +1,48 @@
+<app-header></app-header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<body>
+  <br>
+<div class="container">
+    <div class="main">
+    <h2 class="text-center"><b>Bank User Login</b></h2>
+    <form #form="ngForm">
+        <div class="form-group">
+            <label  for="type of employee">Select Type Of User : </label>
+            <div><select type="select" [(ngModel)]="Usertype" name="Usertype" class="form-control">
+              <option value="" disabled selected hidden>select Your post</option>
+                <option value="Manager">Manager</option>
+                <option value="Employee">Employee</option>
+                <option value="Customer">Customer</option>
+
+              </select>
+            </div>
+          </div>
+      <div class="form-group">
+        <label for="name" >Enter {{Usertype}} Id:</label>
+        <input type="text" [(ngModel)]="userID" placeholder="ID" required minlength=4 name="name" class="form-control" id="name">
+        
+      </div>
+    
+      <div class="form-group">
+        <label for="phone">Enter Password </label>
+        <input type="password" (keypress)="VerifyPassword($event)" [(ngModel)]="password" placeholder="password" name="phone" class="form-control" id="phone">
+        <div *ngIf="showCapsWarning">
+          <span class="fa fa-exclamation-triangle text-warning"></span>
+          <span class="text-warning">Warning CAPS is ON</span>
+      </div>
+      
+      </div>
+      <div>
+        <button class="login" (click)="Login()">login</button>
+      </div>
+    </form>
+    </div>
+</div>
+</body>
+
