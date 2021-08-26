@@ -1,0 +1,69 @@
+<app-header></app-header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+
+<body>
+<br>
+<div class="container">
+    <div class="main">
+    <h2 class="text-center"><b>Customer Registration</b></h2>
+    <form #form="ngForm">
+      <div class="form-group">
+        <label for="name">Name:</label><br>
+        <input type="text" [(ngModel)]="customer.name" placeholder="Enter yourName" name="name" class="form-control" id="name">
+     
+      </div>
+    
+      <div class="form-group">
+        <label for="phone">Phone Number </label><br>
+        <input type="number" [(ngModel)]="customer.phone" placeholder="Enter phone number" name="phone" class="form-control" id="phone">
+        <div *ngIf="">Content to render when condition is true.</div>
+      </div>
+    
+      <div class="form-group">
+        <label for="Email">Enter Email</label><br>
+        <input type="email"  email #prmEmail="ngModel" [(ngModel)]="customer.email"  placeholder="Enter email address" name="email" class="form-control" id="email" required #idfield="ngModel">
+        <div *ngIf="prmEmail.errors?.email"> 
+          Email not valid.
+    </div> 
+      </div>
+      <div class="form-group">
+        <label for="pan">Enter PAN Number</label><br>
+        <input type="text" [(ngModel)]="customer.pan" placeholder="Enter correct PAN Number" name="pan" class="form-control" id="pan">
+      </div>
+      <div class="form-group">
+        <label for="account">Enter Type Of Account you wish to Open : </label>
+        <div><select type="select" [(ngModel)]="customer.accounttype" name="accounttype" class="form-control">
+            <option value="savings">Savings</option>
+            <option value="loan">Loan</option>
+            <option value="FD">Fixed Deposit</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <label for="password">Enter Your Password</label><br>
+        <input type="password"  (keyup)="VerifyPassword1()" (keypress)="VerifyPassword($event)"   [(ngModel)]="customer.password"  placeholder="Create your own password" name="password" class="form-control" id="password">
+        <div *ngIf="showCapsWarning">
+          <span class="fa fa-exclamation-triangle text-warning"></span>
+          <span class="text-warning">Warning CAPS is ON</span>
+      </div>
+      <div>
+        <meter min="{{min}}" max="{{max}}" value="{{val}}" low="{{low}}" high=
+       "{{high}}" > </meter>
+        {{pwdStrength}}
+        </div>
+
+      </div>
+     
+
+    <div>
+      <button class="register" (click)="createCustomer()">Register</button>
+    </div>
+    
+    </form>
+  
+    </div>
