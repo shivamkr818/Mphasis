@@ -1,0 +1,84 @@
+<app-header></app-header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<body>
+
+<div class="container">
+    <div class="main">
+    <h2 class="text-center"><b>Employee Registration</b></h2>
+    <form #form="ngForm">
+      <div class="form-group">
+        <label for="name">Name:</label><br>
+        <input type="text" [(ngModel)]="employee.name" placeholder="Enter your Name" name="name" class="form-control" id="name" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="phone">Phone Number :</label><br>
+        <input type="number" [(ngModel)]="employee.phone" placeholder="Enter phone number" name="phone" class="form-control" id="phone">
+      </div>
+    
+      <div class="form-group">
+        <label for="Email">Email :</label><br>
+        <input type="email" email #prmEmail="ngModel" [(ngModel)]="employee.email" placeholder="Enter email address" name="email" class="form-control" id="email" required #idfield="ngModel">
+        <div *ngIf="prmEmail.errors?.email"> 
+          Email not valid.
+    </div> 
+     
+      </div>
+     
+      <div class="form-group">
+        <label for="type of employee">Designation : </label>
+        <div><select type="select" [(ngModel)]="employee.employeetype" name="employeetype" class="form-control" >
+
+            <option value="Manager">Manager</option>
+            <option value="Employee">Employee</option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group">
+            <label for="employee department">Department : </label>
+            <div><select type="select" [(ngModel)]="employee.department" name="employeetype" class="form-control">
+                
+                <option value="Deposit">Deposit</option>
+                <option value="Loan">Loan</option>
+                <option value="Manager">Manager</option>
+            </select>
+            </div>
+
+      </div>
+    
+      <div class="form-group">
+        <label for="password">Enter Password:</label><br>
+        <input type="password"  (keyup)="VerifyPassword1()" (keypress)="VerifyPassword($event)"   [(ngModel)]="employee.password" placeholder="Create your own password" name="password" class="form-control" id="password">
+        <div *ngIf="showCapsWarning">
+          <span class="fa fa-exclamation-triangle text-warning"></span>
+          <span class="text-warning">Warning CAPS is ON</span>
+      </div>
+      <div>
+        <meter min="{{min}}" max="{{max}}" value="{{val}}" low="{{low}}" high=
+       "{{high}}" > </meter>
+        {{pwdStrength}}
+        </div>
+       
+     
+     
+     
+      </div>
+    
+    
+    
+
+    <div>
+      <button class="register" (click)="createEmployee()">Register</button>
+    </div>
+    
+    </form>
+    </div>
+
+    </div>
